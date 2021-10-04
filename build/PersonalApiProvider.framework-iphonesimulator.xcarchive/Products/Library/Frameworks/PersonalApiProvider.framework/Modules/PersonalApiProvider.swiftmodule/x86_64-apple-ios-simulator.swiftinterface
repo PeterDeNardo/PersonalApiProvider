@@ -1,0 +1,54 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PersonalApiProvider
+import Foundation
+@_exported import PersonalApiProvider
+import Swift
+import UIKit
+import _Concurrency
+public struct UrlBody {
+  public let scheme: Swift.String
+  public let host: Swift.String
+  public let path: Swift.String
+  public init(scheme: Swift.String, host: Swift.String, path: Swift.String)
+}
+public typealias CompletionData = (statusCode: Swift.Int, data: Foundation.Data)
+public typealias CompletionCallBack = (@escaping () throws -> PersonalApiProvider.CompletionData) -> Swift.Void
+public protocol ApiProviderProtocol {
+  func loadData(url: Foundation.URL, success: @escaping PersonalApiProvider.CompletionCallBack, failure: @escaping PersonalApiProvider.CompletionCallBack)
+  func request(params: [Swift.String : Any], url: PersonalApiProvider.UrlBody, success: @escaping PersonalApiProvider.CompletionCallBack, failure: @escaping PersonalApiProvider.CompletionCallBack)
+}
+public class ApiProvider : PersonalApiProvider.ApiProviderProtocol {
+  public static let shared: PersonalApiProvider.ApiProvider
+  public init()
+  public func request(params: [Swift.String : Any], url: PersonalApiProvider.UrlBody, success: @escaping PersonalApiProvider.CompletionCallBack, failure: @escaping PersonalApiProvider.CompletionCallBack)
+  public func loadData(url: Foundation.URL, success: @escaping PersonalApiProvider.CompletionCallBack, failure: @escaping PersonalApiProvider.CompletionCallBack)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class AsyncOperation : Foundation.Operation {
+  @objc final override public var isReady: Swift.Bool {
+    @objc get
+  }
+  @objc final override public var isExecuting: Swift.Bool {
+    @objc get
+  }
+  @objc final override public var isFinished: Swift.Bool {
+    @objc get
+  }
+  @objc final override public var isCancelled: Swift.Bool {
+    @objc get
+  }
+  @objc final override public var isAsynchronous: Swift.Bool {
+    @objc get
+  }
+  @objc final override public func start()
+  @objc override dynamic open func main()
+  final public func finish()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ApiError : Swift.Error {
+  case unknowError(Swift.Int)
+  case emptyResponse
+  case invalidResponse(Swift.Int)
+}

@@ -1,26 +1,20 @@
 //
-//  UrlModel.swift
-//  MagaluGist
+//  File.swift
+//  PersonalApiProvider
 //
-//  Created by Peter De Nardo on 01/10/21.
+//  Created by Peter De Nardo on 04/10/21.
 //
 
 import Foundation
 
 public struct UrlBody {
-    let scheme: Scheme
-    let host: Host
-    let path: Path
-}
-
-public enum Scheme: String {
-    case https = "https"
-}
-
-public enum Host: String {
-    case api_guthub = "api.github.com"
-}
-
-public enum Path: String {
-    case gist_public = "/gists/public"
+    public let scheme: String
+    public let host: String
+    public let path: String
+    
+    public init(scheme: String, host: String, path: String) {
+        self.scheme = scheme
+        self.host = host
+        self.path = path
+    }
 }

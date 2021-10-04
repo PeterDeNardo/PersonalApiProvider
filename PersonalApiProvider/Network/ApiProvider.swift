@@ -11,7 +11,7 @@ import UIKit
 public typealias CompletionData = (statusCode: Int, data: Data)
 public typealias CompletionCallBack = (@escaping () throws -> CompletionData) -> Void
 
-protocol ApiProviderProtocol {
+public protocol ApiProviderProtocol {
     func loadData(url: URL, success: @escaping CompletionCallBack, failure: @escaping CompletionCallBack)
     func request(params: [String: Any], url: UrlBody, success: @escaping CompletionCallBack, failure: @escaping CompletionCallBack)
 }
@@ -57,9 +57,9 @@ public class ApiProvider: ApiProviderProtocol {
     
     private func generateUrlComponents(urlBody: UrlBody, params: [String: Any]) -> URLComponents {
         var urlComponents = URLComponents()
-        urlComponents.scheme = urlBody.scheme.rawValue
-        urlComponents.host = urlBody.host.rawValue
-        urlComponents.path = urlBody.path.rawValue
+        urlComponents.scheme = urlBody.scheme
+        urlComponents.host = urlBody.host
+        urlComponents.path = urlBody.path
         let queryParams: [URLQueryItem] = getQueryParams(params: params)
         urlComponents.queryItems = queryParams
         return urlComponents

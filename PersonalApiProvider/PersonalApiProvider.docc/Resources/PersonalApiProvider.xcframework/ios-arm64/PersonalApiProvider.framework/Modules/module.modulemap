@@ -1,0 +1,11 @@
+framework module PersonalApiProvider {
+  umbrella header "PersonalApiProvider.h"
+
+  export *
+  module * { export * }
+}
+
+module PersonalApiProvider.Swift {
+    header "PersonalApiProvider-Swift.h"
+    requires objc
+}
