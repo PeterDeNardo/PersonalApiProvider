@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint PersonalProviderApi.podspec' to ensure this is a
+#  Be sure to run `pod spec lint PersonalApiProvider.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "PersonalProviderApi"
+  spec.name         = "PersonalApiProvider"
   spec.version      = "0.0.1"
   spec.summary      = "This framework helps on Api Requests"
 
