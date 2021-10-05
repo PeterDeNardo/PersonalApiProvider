@@ -24,6 +24,7 @@
 		96DE2154270BA32B0071371B /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DE2151270BA32B0071371B /* AsyncOperation.swift */; };
 		96DE2156270BA3580071371B /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DE2155270BA3570071371B /* ApiProvider.swift */; };
 		96DE218A270BBC1C0071371B /* UrlBodyConstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DE2189270BBC1C0071371B /* UrlBodyConstruct.swift */; };
+		96DE218D270BD2120071371B /* PersonalApiProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DE218C270BD2040071371B /* PersonalApiProvider.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		96DE2151270BA32B0071371B /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		96DE2155270BA3570071371B /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 		96DE2189270BBC1C0071371B /* UrlBodyConstruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBodyConstruct.swift; sourceTree = "<group>"; };
+		96DE218C270BD2040071371B /* PersonalApiProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PersonalApiProvider.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96DE218D270BD2120071371B /* PersonalApiProvider.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +147,7 @@
 			children = (
 				96DE216A270BB3050071371B /* Network */,
 				96DE20E1270B87D90071371B /* PersonalApiProvider.h */,
+				96DE218C270BD2040071371B /* PersonalApiProvider.xcframework */,
 				96DE20E2270B87D90071371B /* PersonalApiProvider.docc */,
 			);
 			path = PersonalApiProvider;
